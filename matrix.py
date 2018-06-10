@@ -60,6 +60,9 @@ class matrix:
     
     def __rmul__(self, y):
         return self.__mul__(y)
+    
+    def __len__(self):
+        return len(self.__matrix)
 
     def copy(self):
         new = matrix.zeros(*self.shape)
