@@ -1,8 +1,8 @@
-from numpy import array as _
+from array import array as _
 
 class matrix:
     def __init__(self, array):
-        array = _(array)
+        array = _("f", array)
         self.__check_matrix(array)
         self.__init_matrix(array)
         self.__matrix = array
