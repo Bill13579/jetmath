@@ -69,11 +69,9 @@ class matrix:
         return new
 
     def map(self, f):
-        new = matrix.zeros(*self.shape)
         for r in range(self.shape[0]):
             for c in range(self.shape[1]):
-                new[r,c] = f(self[r,c])
-        return new
+                self[r,c] = f(self[r,c])
     
     def tolist(self):
         l = []
