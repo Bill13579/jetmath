@@ -67,6 +67,13 @@ class matrix:
             for c in range(self.shape[1]):
                 new[r,c] = self[r,c]
         return new
+    
+    def sum(self):
+        s = 0
+        for r in range(self.shape[0]):
+            for c in range(self.shape[1]):
+                s += self[r,c]
+        return s
 
     def map(self, f):
         for r in range(self.shape[0]):
