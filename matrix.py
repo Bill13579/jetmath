@@ -1,4 +1,5 @@
 from array import array as _
+import jetm.math as math
 
 class matrix:
     def __init__(self, array):
@@ -69,17 +70,21 @@ class matrix:
         return new
     
     def sum(self):
-        s = 0
+        s = 0.0
+        c = 0.0
         for r in range(self.shape[0]):
             for c in range(self.shape[1]):
-                s += self[r,c]
+                y = self[r,c] - c
+                t = s + y
+                c = (t - s) - y
+                s = t
         return s
 
     def map(self, f):
         for r in range(self.shape[0]):
             for c in range(self.shape[1]):
                 self[r,c] = f(self[r,c])
-    
+
     def tolist(self):
         l = []
         for i in range(0, len(self.__matrix), self.shape[1]):
@@ -155,8 +160,22 @@ class matrix:
         return new
     
     @staticmethod
+    def exp(m):
+        new = m.copy()
+        new.map(math.exp)
+        return new
+    
+    @staticmethod
     def zeros(rows, cols):
         return matrix([[0.0] * cols] * rows)
+    
+    @staticmethod
+    def softmax(vector):
+        new = vector.copy()
+        for r in range(new.shape[0]):
+            n = vector[r,0]
+            new[r,0] = math.softmax(n, vector)
+        return new
 
     class InitializationException(Exception):
         pass
