@@ -8,11 +8,11 @@ def rand(rows, cols):
     m = matrix.zeros(rows, cols)
     for r in range(m.shape[0]):
         for c in range(m.shape[1]):
-            m[r,c] = random.random()
+            m[r,c] = randd()
     return m
 
 def randd():
-    return random.random()
+    return random.uniform(-1.0, 1.0)
 
 def randruns(p, s, f, params=(), iterations=1):
     results = []
