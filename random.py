@@ -11,8 +11,17 @@ def rand(rows, cols):
             m[r,c] = randd()
     return m
 
+def uniform(start, end):
+    return random.uniform(start, end)
+
 def randd():
     return random.uniform(-1.0, 1.0)
+
+def happened(self, event):
+    if uniform(0, 1) < event:
+        return True
+    else:
+        return False
 
 def randruns(p, s, f, params=(), iterations=1):
     results = []
@@ -22,7 +31,7 @@ def randruns(p, s, f, params=(), iterations=1):
 
 def randrun(p, s, f, params=()):
     result = None
-    if randd() < p:
+    if uniform(0, 1) < p:
         result = RunResult(s(*params), True)
     else:
         result = RunResult(f(*params), False)
