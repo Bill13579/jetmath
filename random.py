@@ -17,7 +17,7 @@ def uniform(start, end):
 def randd():
     return random.uniform(-1.0, 1.0)
 
-def happened(self, event):
+def happened(event):
     if uniform(0, 1) < event:
         return True
     else:
