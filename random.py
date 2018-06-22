@@ -40,6 +40,18 @@ def randrun(p, s, f, params=()):
 def choice(seq):
     return random.choice(seq)
 
+def probchoice(seq, probabilities, total_prob=1):
+    if total_prob == None:
+        total_prob = 0.0
+        for prob in probabilities:
+            total_prob += prob
+    running_sum = 0.0
+    c = uniform(0, total_prob)
+    for i in range(len(seq)):
+        running_sum += probabilities[i]
+        if c < running_sum:
+            return seq[i]
+
 class RunResult:
     __slots__ = ("return_value", "special")
     def __init__(self, return_value, special):
