@@ -1,3 +1,5 @@
+from math import floor
+
 E = 2.71828182845904523536028747135266250
 
 def add(x, y):
@@ -42,6 +44,9 @@ def relu_p(x):
 
 def leaky_relu_p(x):
     return 1 if x > 0 else LEAKY_RELU_A
+
+def sepd(x):
+    return floor(x), x % 1
 
 class IncompatibleTypeException(Exception):
     pass
