@@ -1,0 +1,12 @@
+README.md
+setup.py
+jetmath/__init__.py
+jetmath/math.py
+jetmath/matrix.py
+jetmath/random.py
+jetmath/round.py
+jetmath/sort.py
+jetmath.egg-info/PKG-INFO
+jetmath.egg-info/SOURCES.txt
+jetmath.egg-info/dependency_links.txt
+jetmath.egg-info/top_level.txt
