@@ -1,4 +1,4 @@
-from jetm import random, math
+from jetmath import random, math
 
 def quicksort(arr, get_comparable_value=math.identity, reverse=False):
     if len(arr) == 0 or len(arr) == 1:

@@ -1,5 +1,5 @@
 import random
-from jetm import matrix
+from jetmath import matrix
 
 def seed(seed):
     random.seed(random.SystemRandom().randint(0, 2147483647))

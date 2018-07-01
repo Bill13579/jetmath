@@ -1,5 +1,5 @@
 from array import array as _
-import jetm.math as math
+import jetmath.math as math
 
 class matrix:
     def __init__(self, array):
