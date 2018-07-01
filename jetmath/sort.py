@@ -1,7 +1,7 @@
 from jetmath import random, math
 
 def quicksort(arr, get_comparable_value=math.identity, reverse=False):
-    if len(arr) == 0 or len(arr) == 1:
+    if len(arr) < 2:
         return arr
     pivit = random.randint(0, len(arr)-1)
     pivit_ele = arr[pivit]
