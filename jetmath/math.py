@@ -1,3 +1,4 @@
+from __future__ import absolute_import
 from math import floor
 
 E = 2.71828182845904523536028747135266250
@@ -12,7 +13,7 @@ def multiply(x, y):
     return x * y
 
 def divide(x, y):
-    return x / y
+    return float(x) / float(y)
 
 def exp(x):
     return E ** x

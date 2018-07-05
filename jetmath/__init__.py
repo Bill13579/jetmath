@@ -1,3 +1,2 @@
-import jetmath.random, jetmath.round, jetmath.sort
+import jetmath.random, jetmath.round, jetmath.sort, jetmath.matrix
 from jetmath.math import *
-from jetmath.matrix import *

@@ -1,5 +1,6 @@
+from __future__ import absolute_import
 import random
-from jetmath import matrix
+from jetmath.matrix import matrix
 
 def seed(seed):
     random.seed(random.SystemRandom().randint(0, 2147483647))
