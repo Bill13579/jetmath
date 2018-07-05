@@ -3,6 +3,7 @@ setup.py
 jetmath/__init__.py
 jetmath/math.py
 jetmath/matrix.py
+jetmath/nonlin.py
 jetmath/random.py
 jetmath/round.py
 jetmath/sort.py
