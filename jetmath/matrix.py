@@ -168,14 +168,6 @@ class matrix:
     @staticmethod
     def zeros(rows, cols):
         return matrix([[0.0] * cols] * rows)
-    
-    @staticmethod
-    def softmax(vector):
-        new = vector.copy()
-        for r in range(new.shape[0]):
-            n = vector[r,0]
-            new[r,0] = math.softmax(n, vector)
-        return new
 
     class InitializationException(Exception):
         pass
