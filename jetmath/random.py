@@ -2,8 +2,11 @@ from __future__ import absolute_import
 import random
 from jetmath.matrix import matrix
 
-def seed(seed):
-    random.seed(random.SystemRandom().randint(0, 2147483647))
+def seed(seed=None):
+    if seed is None:
+        random.seed(random.SystemRandom().randint(0, 2147483647))
+    else:
+        random.seed(seed)
 
 def rand(rows, cols):
     m = matrix.zeros(rows, cols)
