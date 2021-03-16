@@ -6,7 +6,7 @@ with open("README_PYPI.md", "r") as rm:
 setuptools.setup(
     name="jetmath",
     version="1.1.0",
-    author="Bill Kudo",
+    author="BillK",
     author_email="bluesky42624@gmail.com",
     description="An extensive math library focused on machine learning",
     long_description=long_description,
